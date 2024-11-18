@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album de atividades</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-size: 18px; 
+    line-height: 1.6;
+    }
+        header, footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #f4f4f4;
+            color: white;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery img {
+            margin: 10px;
+            width: calc(20% - 20px);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: black; 
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px; 
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;  
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fotografias do evento</h1>
+    </header>
+
+    <nav>
+        <a href="codigo.html">Dia do Desporto</a>
+        <a href="album.html">Álbum de atividades</a>
+        <a href="QF.html">Quem Desenvolveu</a>
+        <a href="contactar.html">Contate-nos</a>
+    </nav>
+    <center>
+    <img style="width: 10%; height: 10%;" src="imagens/aear.jpg">
+    </center>
+    <br><br><br><br><br>
+    
+    <section class="gallery">
+        <img src="imagens/foto1.jpg" alt="Foto 1" onclick="openModal(this)">
+        <img src="imagens/foto2.jpg" alt="Foto 2" onclick="openModal(this)">
+        <img src="imagens/foto3.jpg" alt="Foto 3" onclick="openModal(this)">
+        <img src="imagens/foto4.jpg" alt="Foto 4" onclick="openModal(this)">
+        <br>
+        <img src="imagens/foto5.jpg" alt="Foto 5" onclick="openModal(this)">
+        <img src="imagens/foto6.jpg" alt="Foto 6" onclick="openModal(this)">
+        <img src="imagens/foto7.jpg" alt="Foto 7" onclick="openModal(this)">
+        <img src="imagens/foto8.jpg" alt="Foto 8" onclick="openModal(this)">
+        <br>
+        <img src="imagens/foto9.jpg" alt="Foto 9" onclick="openModal(this)">
+        <img src="imagens/foto10.jpg" alt="Foto 10" onclick="openModal(this)">
+        <img src="imagens/foto11.jpg" alt="Foto 11" onclick="openModal(this)">
+        <img src="imagens/foto12.jpg" alt="Foto 12" onclick="openModal(this)">
+        <br>
+        <img src="imagens/foto13.jpg" alt="Foto 13" onclick="openModal(this)">
+        <img src="imagens/foto14.jpg" alt="Foto 14" onclick="openModal(this)">
+        <img src="imagens/foto15.jpg" alt="Foto 15" onclick="openModal(this)">
+        <img src="imagens/foto16.jpg" alt="Foto 16" onclick="openModal(this)">
+        <br>
+        <img src="imagens/foto17.jpg" alt="Foto 17" onclick="openModal(this)">
+        <img src="imagens/foto18.jpg" alt="Foto 18" onclick="openModal(this)">
+        <img src="imagens/foto19.jpg" alt="Foto 19" onclick="openModal(this)">
+        <img src="imagens/foto20.jpg" alt="Foto 20" onclick="openModal(this)">
+    </section>
+    
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+    
+    <script>
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("imgModal");
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+       </p>
+    </div>
+    <br><br><br><br><br>
+        <footer style=" background-color: #333;color: white;text-align: center;padding: 20px;">
+            <p>&copy; 2024/2025  Gabriel Caldas|| João Dutra || Kaick Oliveira.</p>
+        </footer>
+</center>            
+</body>
+    </body>
+    </html>
+    
